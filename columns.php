@@ -18,7 +18,7 @@ kirbytext::$pre[] = function($kirbytext, $text) {
             $html[] = '<div class="' . c::get('columns.item', 'column') . '">' . kirbytext($field) . '</div>';
         }
 
-        return '<div class="' . c::get('columns.container', 'columns') . ' ' . c::get('columns.container', 'columns') . '-' . count($columns) . '">' . implode($html) . '</div>';
+        return '<div class="' . c::get('columns.container', 'columns') . '">' . implode($html) . '</div>';
 
     }, $text);
 
