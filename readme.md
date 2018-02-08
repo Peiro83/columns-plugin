@@ -52,31 +52,29 @@ Add the following rules to your CSS to enable the column layout:
 
 ```css
 .columns {
-  margin-right: -2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: -1rem;
+    margin-right: -1rem;
 }
+
 .column {
-  display: inline-block;
-  vertical-align: top;
-  padding-right: 2rem;
+    flex: 0 1 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: 100%;
 }
-.columns-1 .column {
-  width: 100%;
-}
-.columns-2 .column {
-  width: 50%;
-}
-.columns-3 .column {
-  width: 33.33%;
-}
-.columns-4 .column {
-  width: 25%;
-}
-.columns-5 .column {
-  width: 20%;
+
+@media (min-width: 790px) {
+
+    .column {
+        flex: 1;
+    }
 }
 ```
 
-Modify the gutter between columns by changing the right margin on the .columns container and the right padding on the .column
+Modify the gutter between columns by changing the margin on the .columns container and the margin on the .column
 
 ## Modifying class names
 
